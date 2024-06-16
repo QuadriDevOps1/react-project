@@ -1,9 +1,9 @@
 name:  Test and deploy workflow
-on: [ push, workflow_dispatch ]
+on: [push, workflow_dispatch]
 jobs:
   test:
-  runs-on: ubuntu-latest
-  steps:
+   runs-on: ubuntu-latest
+   steps:
     - name: Get code
       uses: actions/checkout@v4
     - name: Install NodeJs
@@ -13,8 +13,8 @@ jobs:
     - name: Install dependencies
       run: npm ci
   deploy:
-  runs-on: ubuntu-latest
-  steps:
+   runs-on: ubuntu-latest
+   steps:
     - name: Get code
       uses: actions/checkout@v4
     - name: Install NodeJs
